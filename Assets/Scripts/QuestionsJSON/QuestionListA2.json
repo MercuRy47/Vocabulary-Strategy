@@ -1,0 +1,254 @@
+{
+    "questions": [
+        {
+            "id": "A2-001",
+            "question": "สวมใส่",
+            "answer": "wear"
+        },
+        {
+            "id": "A2-002",
+            "question": "สวยงาม",
+            "answer": "beautiful"
+        },
+        {
+            "id": "A2-003",
+            "question": "ขวัญใจ",
+            "answer": "beloved"
+        },
+        {
+            "id": "A2-004",
+            "question": "กลายเป็น",
+            "answer": "become"
+        },
+        {
+            "id": "A2-005",
+            "question": "เริ่มต้น",
+            "answer": "begin"
+        },
+        {
+            "id": "A2-006",
+            "question": "ตัวแทน",
+            "answer": "representative"
+        },
+        {
+            "id": "A2-007",
+            "question": "ลืม",
+            "answer": "forget"
+        },
+        {
+            "id": "A2-008",
+            "question": "เจ้าหน้าที่",
+            "answer": "officer"
+        },
+        {
+            "id": "A2-009",
+            "question": "อายุ",
+            "answer": "age"
+        },
+        {
+            "id": "A2-010",
+            "question": "สถานการณ์",
+            "answer": "situation"
+        },
+        {
+            "id": "A2-011",
+            "question": "ความคิดเห็น",
+            "answer": "opinion"
+        },
+        {
+            "id": "A2-012",
+            "question": "ร้องไห้",
+            "answer": "cry"
+        },
+        {
+            "id": "A2-013",
+            "question": "เพื่อนร่วมงาน",
+            "answer": "colleague"
+        },
+        {
+            "id": "A2-014",
+            "question": "คำสั่ง",
+            "answer": "command"
+        },
+        {
+            "id": "A2-015",
+            "question": "ผู้ชาย",
+            "answer": "man"
+        },
+        {
+            "id": "A2-016",
+            "question": "สาว",
+            "answer": "woman"
+        },
+        {
+            "id": "A2-017",
+            "question": "เสียง",
+            "answer": "sound"
+        },
+        {
+            "id": "A2-018",
+            "question": "โต๊ะทำงาน",
+            "answer": "desk"
+        },
+        {
+            "id": "A2-019",
+            "question": "ช่วย",
+            "answer": "help"
+        },
+        {
+            "id": "A2-020",
+            "question": "ความรู้สึก",
+            "answer": "feeling"
+        },
+        {
+            "id": "A2-021",
+            "question": "หวาน",
+            "answer": "sweet"
+        },
+        {
+            "id": "A2-022",
+            "question": "หลับ",
+            "answer": "sleep"
+        },
+        {
+            "id": "A2-023",
+            "question": "พิมพ์",
+            "answer": "type"
+        },
+        {
+            "id": "A2-024",
+            "question": "คนอื่น",
+            "answer": "other"
+        },
+        {
+            "id": "A2-025",
+            "question": "ดำเนินการ",
+            "answer": "operate"
+        },
+        {
+            "id": "A2-026",
+            "question": "เจ้าของ",
+            "answer": "owner"
+        },
+        {
+            "id": "A2-027",
+            "question": "สุขภาพ",
+            "answer": "health"
+        },
+        {
+            "id": "A2-028",
+            "question": "สี",
+            "answer": "color"
+        },
+        {
+            "id": "A2-029",
+            "question": "ความสุข",
+            "answer": "happiness"
+        },
+        {
+            "id": "A2-030",
+            "question": "ดีใจ",
+            "answer": "glad"
+        },
+        {
+            "id": "A2-031",
+            "question": "อย่างไร",
+            "answer": "how"
+        },
+        {
+            "id": "A2-032",
+            "question": "ทางเข้า",
+            "answer": "entrance"
+        },
+        {
+            "id": "A2-033",
+            "question": "ปลดปล่อย",
+            "answer": "release"
+        },
+        {
+            "id": "A2-034",
+            "question": "ใส่ใจ",
+            "answer": "care"
+        },
+        {
+            "id": "A2-035",
+            "question": "พบกัน",
+            "answer": "meet"
+        },
+        {
+            "id": "A2-036",
+            "question": "การลงทะเบียน",
+            "answer": "registration"
+        },
+        {
+            "id": "A2-037",
+            "question": "ออกจาก",
+            "answer": "leave"
+        },
+        {
+            "id": "A2-038",
+            "question": "ชาวต่างชาติ",
+            "answer": "foreigner"
+        },
+        {
+            "id": "A2-039",
+            "question": "อนุญาต",
+            "answer": "permit"
+        },
+        {
+            "id": "A2-040",
+            "question": "เตียงนอน",
+            "answer": "bed"
+        },
+        {
+            "id": "A2-041",
+            "question": "แปรงสีฟัน",
+            "answer": "toothbrush"
+        },
+        {
+            "id": "A2-042",
+            "question": "ผู้บริหาร",
+            "answer": "manager"
+        },
+        {
+            "id": "A2-043",
+            "question": "การเรียน",
+            "answer": "study"
+        },
+        {
+            "id": "A2-044",
+            "question": "โปรด",
+            "answer": "please"
+        },
+        {
+            "id": "A2-045",
+            "question": "ร้านอาหาร",
+            "answer": "restaurant"
+        },
+        {
+            "id": "A2-046",
+            "question": "ห้องน้ำ",
+            "answer": "bathroom"
+        },
+        {
+            "id": "A2-047",
+            "question": "สิ่งที่ต้องการ",
+            "answer": "need"
+        },
+        {
+            "id": "A2-048",
+            "question": "เครื่องซักผ้า",
+            "answer": "washing machine"
+        },
+        {
+            "id": "A2-049",
+            "question": "ลูกบอล",
+            "answer": "ball"
+        },
+        {
+            "id": "A2-050",
+            "question": "การประชุม",
+            "answer": "meeting"
+        }
+    ]
+}
