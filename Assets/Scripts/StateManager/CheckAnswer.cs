@@ -30,9 +30,9 @@ public class CheckAnswer : MonoBehaviour
         StartCoroutine(DelayThenReset());
     }
 
-    private IEnumerator DelayThenReset()
+    public IEnumerator DelayThenReset()
     {
-        QuestionsRespon questionsRespon = FindObjectOfType<QuestionsRespon>();
+        QuestionsRespon questionsRespon = QuestionsRespon.Instance; // Get the instance of QuestionsRespon
 
         if (optionAnswer == correctAnswer)
         {
@@ -45,10 +45,10 @@ public class CheckAnswer : MonoBehaviour
             wrongScore++;
         }
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         targetImage.sprite = non;
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.25f);
         questionsRespon.randomQuestion();
 
         Debug.Log(optionAnswer + " : " + correctAnswer);

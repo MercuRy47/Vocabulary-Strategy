@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 public class StarRating : MonoBehaviour
 {
@@ -13,6 +14,11 @@ public class StarRating : MonoBehaviour
     public Sprite starOff;
 
     private void Update()
+    {
+        UpdateStars();
+    }
+
+    private void UpdateStars()
     {
         if (count >= 3)
         {

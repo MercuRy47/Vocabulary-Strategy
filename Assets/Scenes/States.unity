@@ -314,7 +314,7 @@ GameObject:
   - component: {fileID: 159874314}
   - component: {fileID: 159874315}
   m_Layer: 5
-  m_Name: Stars
+  m_Name: Stars - 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -398,7 +398,7 @@ GameObject:
   - component: {fileID: 242640460}
   - component: {fileID: 242640461}
   m_Layer: 5
-  m_Name: Stars
+  m_Name: Stars - 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1954,7 +1954,7 @@ GameObject:
   - component: {fileID: 780532712}
   - component: {fileID: 780532713}
   m_Layer: 5
-  m_Name: Stars
+  m_Name: Stars - 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4840,7 +4840,7 @@ GameObject:
   - component: {fileID: 1471017475}
   - component: {fileID: 1471017476}
   m_Layer: 5
-  m_Name: Stars
+  m_Name: Stars - 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4987,6 +4987,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1484100426}
   m_CullTransparentMesh: 1
+--- !u!1 &1487873452
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1487873453}
+  - component: {fileID: 1487873454}
+  m_Layer: 0
+  m_Name: StarRatingManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1487873453
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487873452}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1761136575}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1487873454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487873452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6755995954c2ab44afae5726b1282ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starRatingObjects:
+  - {fileID: 1705680747}
+  - {fileID: 242640458}
+  - {fileID: 159874312}
+  - {fileID: 2143193461}
+  - {fileID: 1471017473}
+  - {fileID: 1838222749}
+  - {fileID: 780532710}
 --- !u!1 &1514187023
 GameObject:
   m_ObjectHideFlags: 0
@@ -4997,6 +5049,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1514187025}
   - component: {fileID: 1514187024}
+  - component: {fileID: 1514187026}
   m_Layer: 0
   m_Name: LoadScenes
   m_TagString: Untagged
@@ -5016,7 +5069,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7355e57e096d0584bbcecb1ec0869e51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 0
 --- !u!4 &1514187025
 Transform:
   m_ObjectHideFlags: 0
@@ -5032,6 +5084,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1761136575}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1514187026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514187023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 076f043ec01431d4ea26b3e5eb53ad95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1518079507
 GameObject:
   m_ObjectHideFlags: 0
@@ -5891,7 +5955,7 @@ GameObject:
   - component: {fileID: 1705680749}
   - component: {fileID: 1705680750}
   m_Layer: 5
-  m_Name: Stars
+  m_Name: Stars - 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6114,6 +6178,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1514187025}
+  - {fileID: 1487873453}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1773479552
@@ -6602,7 +6667,7 @@ GameObject:
   - component: {fileID: 1838222751}
   - component: {fileID: 1838222752}
   m_Layer: 5
-  m_Name: Stars
+  m_Name: Stars - 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7639,7 +7704,7 @@ GameObject:
   - component: {fileID: 2143193463}
   - component: {fileID: 2143193464}
   m_Layer: 5
-  m_Name: Stars
+  m_Name: Stars - 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

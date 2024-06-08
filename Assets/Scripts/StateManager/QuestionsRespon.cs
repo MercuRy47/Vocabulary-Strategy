@@ -5,6 +5,12 @@ using UnityEngine;
 
 public class QuestionsRespon : MonoBehaviour
 {
+    public static QuestionsRespon Instance { get; private set; }
+
+    public GameObject questionsOn;
+    public GameObject timerOn;
+    public GameObject questionsOff;
+
     public TextMeshProUGUI tmpScore;
 
     public TextMeshProUGUI tmpQuestion;
@@ -18,24 +24,78 @@ public class QuestionsRespon : MonoBehaviour
     public static string correctAnswer;
     public string answerRandom1;
     public string answerRandom2;
+    public int times; // Set this to the number of times randomQuestion() should be called
+    public int questionCount = 0; // Counter for the number of times randomQuestion() has been called
 
     private LoadQuestions loadQuestions;
+
+    private void Awake()
+    {
+        // Make sure there is only one instance of QuestionsRespon
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {
         loadQuestions = FindObjectOfType<LoadQuestions>();
-        loadQuestions.LoadJson(); // âËÅ´¢éÍÁÙÅ JSON ä¿Åì
-        randomQuestion();
+        loadQuestions.LoadJson(); // Load the JSON file
+        //randomQuestion();
+        //CountTime.Instance.StartCountdown();
     }
 
     private void Update()
     {
-        tmpScore.SetText("Correct: " + CheckAnswer.correctScore + "\nWrong: " + CheckAnswer.wrongScore);
+        tmpScore.SetText("Score: " + CheckAnswer.correctScore);
+        Debug.Log(questionCount + " : " + times);
+
     }
+
+    public void runRandom()
+    {
+        if (questionCount == times)
+        {
+            questionsOn.SetActive(false);
+            timerOn.SetActive(false);
+            questionsOff.SetActive(true);
+
+            questionCount = 0;
+            return;
+        }
+
+        randomQuestion();
+    }
+
 
     public void randomQuestion()
     {
-        GenerateRandomNumbers();
+        if (questionCount == times)
+        {
+            questionsOn.SetActive(false);
+            timerOn.SetActive(false);
+            questionsOff.SetActive(true);
+
+            return;
+        }
+
+        // Show questionsOn and timerOn after setting up the question
+        questionsOn.SetActive(true);
+        timerOn.SetActive(true);
+        questionsOff.SetActive(false);
+
+        CountTime.Instance.ResetCountdown();
+        CountTime.Instance.StartCountdown();
+
+        // Generate a new random number that hasn't been used yet
+        saveNumber = GetUnusedRandomNumber();
+
         string id = loadQuestions.questionsList.questions[saveNumber].id;
         string question = loadQuestions.questionsList.questions[saveNumber].question;
         correctAnswer = loadQuestions.questionsList.questions[saveNumber].answer;
@@ -55,7 +115,22 @@ public class QuestionsRespon : MonoBehaviour
         tmpOption1.SetText(GetAnswer(optionIndices[0]));
         tmpOption2.SetText(GetAnswer(optionIndices[1]));
         tmpOption3.SetText(GetAnswer(optionIndices[2]));
+
+        questionCount++; // Increment the counter
     }
+
+    private int GetUnusedRandomNumber()
+    {
+        int randomNumber;
+        do
+        {
+            randomNumber = Random.Range(0, maxNumber + 1);
+        } while (usedNumbers.Contains(randomNumber));
+
+        usedNumbers.Add(randomNumber);
+        return randomNumber;
+    }
+
 
     private string GetAnswer(int index)
     {
@@ -89,7 +164,6 @@ public class QuestionsRespon : MonoBehaviour
         if (usedNumbers.Count >= maxNumber)
         {
             usedNumbers.Clear(); // Clear used numbers if all numbers are used
-            //return; // Exit the function if all numbers are used
         }
 
         int randomNumber;
@@ -101,8 +175,6 @@ public class QuestionsRespon : MonoBehaviour
         usedNumbers.Add(randomNumber);
         saveNumber = randomNumber;
     }
-
-
 
     private void GenerateRandomAnswers()
     {

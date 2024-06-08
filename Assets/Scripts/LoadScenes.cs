@@ -7,12 +7,12 @@ using UnityEngine.SceneManagement;
 public class LoadScenes : MonoBehaviour
 {
     [Header("Count State")]
-    [SerializeField] private int count;
     public static int countState;
+    private int count;
 
-    private void Update()
+    private void Start()
     {
-        countState = count;
+        count = countState;
     }
 
     public void StateTutorial()
