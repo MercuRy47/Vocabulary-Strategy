@@ -57,18 +57,20 @@ public class CountTime : MonoBehaviour
             yield return null;
         }
 
+        // Countdown has reached 0
+        tmpTimer.text = "0.00";  // Display when the time is up
+        CheckAnswer.wrongScore++;
+
         // Check if the question limit has been reached
-        if (QuestionsRespon.Instance != null && QuestionsRespon.Instance.questionCount < QuestionsRespon.Instance.times)
+        if (QuestionsRespon.Instance != null && QuestionsRespon.Instance.questionCount <= QuestionsRespon.Instance.times)
         {
-            tmpTimer.text = "0.00";  // Display when the time is up
-            CheckAnswer.wrongScore++;
-            QuestionsRespon.Instance.randomQuestion();
-            StartCountdown();
+            QuestionsRespon.Instance.randomQuestion();           
         }
         else
         {
             StopCoroutine(countdownCoroutine);  // Stop the countdown coroutine
             countdownCoroutine = null;
         }
+
     }
 }

@@ -18,6 +18,9 @@ public class CheckAnswer : MonoBehaviour
 
     public static int correctScore;
     public static int wrongScore;
+    public int comboScore;
+    public static int saveComboScore;
+    public static int successPoint;
 
     private void Update()
     {
@@ -38,11 +41,17 @@ public class CheckAnswer : MonoBehaviour
         {
             targetImage.sprite = correct;
             correctScore++;
+            if(correctScore > 1)
+            {
+                comboScore++;
+                saveComboScore = comboScore;
+            }
         }
         else
         {
             targetImage.sprite = wrong;
             wrongScore++;
+            comboScore = 0;
         }
 
         yield return new WaitForSeconds(0.5f);

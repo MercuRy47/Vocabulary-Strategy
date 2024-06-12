@@ -10,8 +10,10 @@ public class QuestionsRespon : MonoBehaviour
     public GameObject questionsOn;
     public GameObject timerOn;
     public GameObject questionsOff;
+    public GameObject descriptionPage;
 
     public TextMeshProUGUI tmpScore;
+    public TextMeshProUGUI tmpScoreBar;
 
     public TextMeshProUGUI tmpQuestion;
     public TextMeshProUGUI tmpOption1;
@@ -45,6 +47,7 @@ public class QuestionsRespon : MonoBehaviour
 
     private void Start()
     {
+        descriptionPage.SetActive(true);
         loadQuestions = FindObjectOfType<LoadQuestions>();
         loadQuestions.LoadJson(); // Load the JSON file
         //randomQuestion();
@@ -53,23 +56,39 @@ public class QuestionsRespon : MonoBehaviour
 
     private void Update()
     {
-        tmpScore.SetText("Score: " + CheckAnswer.correctScore);
+        tmpScore.SetText("Correct: " + CheckAnswer.correctScore + "\nWrong: " + CheckAnswer.wrongScore);
         Debug.Log(questionCount + " : " + times);
 
     }
 
+    public void runStart()
+    {
+        descriptionPage.SetActive(false);
+        if (CountStart.Instance != null)
+        {
+            CountStart.Instance.StartCountdown();
+        }
+        else
+        {
+            Debug.LogError("CountStart.Instance is null");
+        }
+    }
+    public void runTimer()
+    {
+        Timer.Instance.StartCountTimer();
+    }
+
     public void runRandom()
     {
+        
         if (questionCount == times)
         {
             questionsOn.SetActive(false);
             timerOn.SetActive(false);
             questionsOff.SetActive(true);
 
-            questionCount = 0;
             return;
         }
-
         randomQuestion();
     }
 
@@ -81,7 +100,9 @@ public class QuestionsRespon : MonoBehaviour
             questionsOn.SetActive(false);
             timerOn.SetActive(false);
             questionsOff.SetActive(true);
-
+            CountTime.Instance.ResetCountdown();
+            Timer.Instance.StopCountTimer();
+            questionCount = 0;
             return;
         }
 
@@ -89,9 +110,8 @@ public class QuestionsRespon : MonoBehaviour
         questionsOn.SetActive(true);
         timerOn.SetActive(true);
         questionsOff.SetActive(false);
-
-        CountTime.Instance.ResetCountdown();
         CountTime.Instance.StartCountdown();
+        runTimer();
 
         // Generate a new random number that hasn't been used yet
         saveNumber = GetUnusedRandomNumber();
@@ -158,24 +178,6 @@ public class QuestionsRespon : MonoBehaviour
             array[j] = temp;
         }
     }
-
-    private void GenerateRandomNumbers()
-    {
-        if (usedNumbers.Count >= maxNumber)
-        {
-            usedNumbers.Clear(); // Clear used numbers if all numbers are used
-        }
-
-        int randomNumber;
-        do
-        {
-            randomNumber = Random.Range(0, maxNumber + 1);
-        } while (usedNumbers.Contains(randomNumber));
-
-        usedNumbers.Add(randomNumber);
-        saveNumber = randomNumber;
-    }
-
     private void GenerateRandomAnswers()
     {
         List<int> numbers = new List<int>();
