@@ -39,9 +39,11 @@ public class UIManager : MonoBehaviour
     private int CoinLevel = 0;
     private float CoinBonus = 1f;
 
+    public static int allLevel;
+
     private void Start()
     {
-        currentCoin = 100000;
+        currentCoin = 20000;
         UpdateCoin();
         StartRightUI();
     }
@@ -64,11 +66,11 @@ public class UIManager : MonoBehaviour
 
     public void StartRightUI()
     {
-        rightButton1TMP.text = $"Atk. lv.{AtkLevel} \n{300}$";
-        rightButton2TMP.text = $"Def. lv.{DefLevel} \n{300}$";
-        rightButton3TMP.text = $"Passive lv.{PassiveLevel} \n{300}$";
-        rightButton4TMP.text = $"+{20} HP \n{300}$";
-        rightButton5TMP.text = $"Coin lv.{CoinLevel} \n{300}$";
+        rightButton1TMP.text = $"Atk. lv.{AtkLevel} \n{400}$";
+        rightButton2TMP.text = $"Def. lv.{DefLevel} \n{400}$";
+        rightButton3TMP.text = $"Passive lv.{PassiveLevel} \n{400}$";
+        rightButton4TMP.text = $"+{20} HP \n{1000}$";
+        rightButton5TMP.text = $"Coin lv.{CoinLevel} \n{400}$";
     }
 
     public void buyAttack()
@@ -77,23 +79,23 @@ public class UIManager : MonoBehaviour
 
         if (AtkLevel == 0)
         {
-            price = 300;
+            price = 400;
         }
         else if (AtkLevel == 1)
         {
-            price = 600;
+            price = 500;
         }
         else if (AtkLevel == 2)
         {
-            price = 1200;
+            price = 600;
         }
         else if (AtkLevel == 3)
         {
-            price = 2400;
+            price = 700;
         }
         else if (AtkLevel == 4)
         {
-            price = 4800;
+            price = 800;
         }
 
         if (currentCoin < price) return;
@@ -109,9 +111,10 @@ public class UIManager : MonoBehaviour
         }
         else
         {
-            int nextPrice = 300 * (int)Mathf.Pow(2, AtkLevel);
+            int nextPrice = 400 + (AtkLevel * 100);
             rightButton1TMP.text = $"Atk. lv.{AtkLevel} \n{nextPrice}$";
         }
+        allLevel += AtkLevel;
     }
     public void buyDefend()
     {
@@ -119,23 +122,23 @@ public class UIManager : MonoBehaviour
 
         if (DefLevel == 0)
         {
-            price = 300;
+            price = 400;
         }
         else if (DefLevel == 1)
         {
-            price = 600;
+            price = 500;
         }
         else if (DefLevel == 2)
         {
-            price = 1200;
+            price = 600;
         }
         else if (DefLevel == 3)
         {
-            price = 2400;
+            price = 700;
         }
         else if (DefLevel == 4)
         {
-            price = 4800;
+            price = 800;
         }
 
         if (currentCoin < price) return;
@@ -151,9 +154,10 @@ public class UIManager : MonoBehaviour
         }
         else
         {
-            int nextPrice = 300 * (int)Mathf.Pow(2, DefLevel);
+            int nextPrice = 400 + (DefLevel * 100);
             rightButton2TMP.text = $"Def. lv.{DefLevel} \n{nextPrice}$";
         }
+        allLevel += DefLevel;
     }
     public void buyPassive()
     {
@@ -161,23 +165,23 @@ public class UIManager : MonoBehaviour
 
         if (PassiveLevel == 0)
         {
-            price = 300;
+            price = 400;
         }
         else if (PassiveLevel == 1)
         {
-            price = 600;
+            price = 500;
         }
         else if (PassiveLevel == 2)
         {
-            price = 1200;
+            price = 600;
         }
         else if (PassiveLevel == 3)
         {
-            price = 2400;
+            price = 700;
         }
         else if (PassiveLevel == 4)
         {
-            price = 4800;
+            price = 800;
         }
 
         if (currentCoin < price) return;
@@ -195,13 +199,17 @@ public class UIManager : MonoBehaviour
         }
         else
         {
-            int nextPrice = 300 * (int)Mathf.Pow(2, PassiveLevel);
+            int nextPrice = 400 + (PassiveLevel * 100);
             rightButton3TMP.text = $"Passive lv.{PassiveLevel} \n{nextPrice}$";
         }
+
+        allLevel += PassiveLevel;
+        HealthManager.Instance.damagePlayer /= 1.1f;
+        HealthManager.Instance.defendPlayer /= 1.1f;
     }
     public void buyHealth()
     {
-        price = 300;
+        price = 1000;
         int health = 20;
         if (currentCoin < price) return;
         if (HealthManager.Instance.healthPlayer < HealthManager.Instance.maxHealthPlayer)
@@ -227,23 +235,23 @@ public class UIManager : MonoBehaviour
 
         if (CoinLevel == 0)
         {
-            price = 300;
+            price = 400;
         }
         else if (CoinLevel == 1)
         {
-            price = 600;
+            price = 500;
         }
         else if (CoinLevel == 2)
         {
-            price = 1200;
+            price = 600;
         }
         else if (CoinLevel == 3)
         {
-            price = 2400;
+            price = 700;
         }
         else if (CoinLevel == 4)
         {
-            price = 4800;
+            price = 800;
         }
 
         if (currentCoin < price) return;
@@ -259,7 +267,7 @@ public class UIManager : MonoBehaviour
         }
         else
         {
-            int nextPrice = 300 * (int)Mathf.Pow(2, CoinLevel);
+            int nextPrice = 400 + (CoinLevel * 100);
             rightButton5TMP.text = $"Coin lv.{CoinLevel} \n{nextPrice}$";
         }
     }

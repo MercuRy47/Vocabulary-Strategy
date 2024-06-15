@@ -57,12 +57,12 @@ public class HealthManager : MonoBehaviour
         UpdateUI();
     }
 
-    private void AttackPlayer(float amount)
+    public void AttackPlayer(float amount)
     {
         healthPlayer -= amount;
         if (healthPlayer < 0) healthPlayer = 0;
     }
-    private void AttackEnemy(float amount)
+    public void AttackEnemy(float amount)
     {
         healthEnemy -= amount;
         if (healthEnemy < 0) healthEnemy = 0;
@@ -70,8 +70,8 @@ public class HealthManager : MonoBehaviour
 
     private void UpdateUI()
     {
-        healthPlayerTMP.text = $"{namePlayer}: {healthPlayer} / {maxHealthPlayer}";
-        healthEnemyTMP.text = $"{nameEnemy}: {healthEnemy} / {maxHealthEnemy}";
+        healthPlayerTMP.text = $"{namePlayer}: {(int)healthPlayer} / {maxHealthPlayer}";
+        healthEnemyTMP.text = $"{nameEnemy}: {(int)healthEnemy} / {maxHealthEnemy}";
 
         healthBarPlayer.fillAmount = Mathf.Lerp(0, 1, healthPlayer / maxHealthPlayer);
         healthBarEnemy.fillAmount = Mathf.Lerp(0, 1, healthEnemy / maxHealthEnemy);

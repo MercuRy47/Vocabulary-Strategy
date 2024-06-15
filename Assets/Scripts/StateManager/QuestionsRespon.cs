@@ -80,7 +80,6 @@ public class QuestionsRespon : MonoBehaviour
 
     public void runRandom()
     {
-        
         if (questionCount == times)
         {
             questionsOn.SetActive(false);
@@ -95,6 +94,7 @@ public class QuestionsRespon : MonoBehaviour
 
     public void randomQuestion()
     {
+        if (FightingManager.buttonCount == 0) return;
         if (questionCount == times)
         {
             questionsOn.SetActive(false);
@@ -103,6 +103,7 @@ public class QuestionsRespon : MonoBehaviour
             CountTime.Instance.ResetCountdown();
             Timer.Instance.StopCountTimer();
             questionCount = 0;
+            FightingManager.buttonCount = 0;
             return;
         }
 
@@ -141,6 +142,11 @@ public class QuestionsRespon : MonoBehaviour
 
     private int GetUnusedRandomNumber()
     {
+        if (usedNumbers.Count == maxNumber + 1)
+        {
+            usedNumbers.Clear(); // Clear the list to start over
+        }
+
         int randomNumber;
         do
         {
