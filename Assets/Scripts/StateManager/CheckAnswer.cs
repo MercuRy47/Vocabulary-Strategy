@@ -18,14 +18,20 @@ public class CheckAnswer : MonoBehaviour
 
     public static int correctScore;
     public static int wrongScore;
-    public int comboScore;
-    public static int saveComboScore;
-    public static int successPoint;
+    public static int comboScore;
 
     private void Update()
     {
         correctAnswer = QuestionsRespon.correctAnswer;
         optionAnswer = targetOption.text;
+    }
+
+    private void Start()
+    {
+        Timer.Instance.elapsedTime = 0f;
+        correctScore = 0;
+        wrongScore = 0;
+        comboScore = 0;
     }
 
     public void checkAnswer()
@@ -41,17 +47,24 @@ public class CheckAnswer : MonoBehaviour
         {
             targetImage.sprite = correct;
             correctScore++;
-            if(correctScore > 1)
+            comboScore++;
+
+            if (comboScore == 5)
             {
-                comboScore++;
-                saveComboScore = comboScore;
+                UIManager.currentCoin += 1000;
             }
+            if (comboScore == 3)
+            {
+                UIManager.currentCoin += 500;
+            }
+            UIManager.currentCoin += 300 * UIManager.CoinBonus;
         }
         else
         {
             targetImage.sprite = wrong;
             wrongScore++;
             comboScore = 0;
+            UIManager.currentCoin += 150 * UIManager.CoinBonus;
         }
 
         yield return new WaitForSeconds(0.5f);
@@ -61,5 +74,6 @@ public class CheckAnswer : MonoBehaviour
         questionsRespon.randomQuestion();
 
         Debug.Log(optionAnswer + " : " + correctAnswer);
+        Debug.Log(comboScore);
     }
 }

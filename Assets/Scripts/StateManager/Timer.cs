@@ -8,7 +8,7 @@ public class Timer : MonoBehaviour
 
     public TextMeshProUGUI tmpTimer;
 
-    private float elapsedTime = 0f;  // Elapsed time
+    public float elapsedTime = 0f;  // Elapsed time
     private Coroutine countCoroutine;  // Coroutine for counting time
 
     private void Awake()

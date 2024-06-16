@@ -31,19 +31,19 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI rightButton6TMP;
 
     private int price;
-    private static float currentCoin;
+    public static float currentCoin;
     private int AtkLevel = 0;
     private int DefLevel = 0;
     private int PassiveLevel = 0;
     private float PassiveBuf = 1;
     private int CoinLevel = 0;
-    private float CoinBonus = 1f;
+    public static float CoinBonus = 1f;
 
     public static int allLevel;
 
     private void Start()
     {
-        currentCoin = 20000;
+        currentCoin = 0;
         UpdateCoin();
         StartRightUI();
     }

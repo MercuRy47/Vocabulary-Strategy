@@ -7,7 +7,7 @@ public class StarRatingManager : MonoBehaviour
     [Header("Star Rating Game Objects")]
     public GameObject[] starRatingObjects = new GameObject[7];
 
-    private static int[] starCounts = new int[7];
+    public static int[] starCounts = new int[7];
 
     private void Start()
     {
@@ -81,6 +81,17 @@ public class StarRatingManager : MonoBehaviour
         for (int i = 0; i < starCounts.Length; i++)
         {
             starCounts[i] = PlayerPrefs.GetInt($"StarCount_{i}", 0);
+        }
+    }
+
+    // เพิ่มฟังก์ชันเพื่อเพิ่มค่าใน starCounts
+    public static void AddToStarCount(int index, int value)
+    {
+        if (index >= 0 && index < starCounts.Length)
+        {
+            starCounts[index] = value;
+            PlayerPrefs.SetInt($"StarCount_{index}", starCounts[index]);
+            PlayerPrefs.Save();
         }
     }
 }

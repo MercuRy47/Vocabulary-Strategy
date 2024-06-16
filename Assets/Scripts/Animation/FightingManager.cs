@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class FightingManager : MonoBehaviour
 {
-    public GameObject summarizeGUI;
+    public GameObject winGUI;
+    public GameObject loseGUI;
     public GameObject allGUI;
     public GameObject fightingGUI;
 
@@ -22,7 +23,8 @@ public class FightingManager : MonoBehaviour
     void Start()
     {
         buttonCount = -1;
-        summarizeGUI.SetActive(false);
+        winGUI.SetActive(false);
+        loseGUI.SetActive(false);
         // ดึงสคริปต์ MoveAndAnimate จาก GameObject ทั้งสอง
         script1 = Player.GetComponent<MoveAndAnimate>();
         script2 = Enemy.GetComponent<MoveAndAnimate>();
@@ -32,22 +34,26 @@ public class FightingManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            SetOrderInLayer(Player, 1);
             script1.StartMoving();
-            SetOrderInLayer(Player, 0);
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            SetOrderInLayer(Enemy, 1);
             script2.StartMoving();
-            SetOrderInLayer(Enemy, 0);
         }
 
         if (HealthManager.Instance.healthEnemy <= 0)
         {
+            SummarizeManager.Instance.CalScore();
             allGUI.SetActive(false);
             fightingGUI.SetActive(false);
-            summarizeGUI.SetActive(true);
+            winGUI.SetActive(true);
+        }
+        if (HealthManager.Instance.healthPlayer <= 0)
+        {
+            SummarizeManager.Instance.CalScore();
+            allGUI.SetActive(false);
+            fightingGUI.SetActive(false);
+            loseGUI.SetActive(true);
         }
     }
 
@@ -63,9 +69,19 @@ public class FightingManager : MonoBehaviour
     IEnumerator AttackCooldown()
     {
         script1.StartMoving();
+
+        if (HealthManager.Instance.healthEnemy <= 0)
+        {
+            yield break; // หยุดการทำงานของ Coroutine ถ้าเงื่อนไขเป็นจริง
+        }
+
         buttonCount = 1;
         yield return new WaitForSeconds(3f); // รอ 3 วินาที
-        script2.StartMoving();
+
+        if (HealthManager.Instance.healthEnemy > 0) // ตรวจสอบอีกครั้งก่อนเริ่มเคลื่อนที่ script2
+        {
+            script2.StartMoving();
+        }
     }
 
     public void DefendPlayer()

@@ -32,7 +32,7 @@ public class SaveGame : MonoBehaviour
         }
     }
 
-    private void SaveCountState()
+    public static void SaveCountState()
     {
         PlayerPrefs.SetInt("CountState", LoadScenes.countState);
         PlayerPrefs.Save();

@@ -57,7 +57,7 @@ public class QuestionsRespon : MonoBehaviour
     private void Update()
     {
         tmpScore.SetText("Correct: " + CheckAnswer.correctScore + "\nWrong: " + CheckAnswer.wrongScore);
-        Debug.Log(questionCount + " : " + times);
+        //Debug.Log(questionCount + " : " + times);
 
     }
 
