@@ -25,6 +25,11 @@ public class Timer : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        tmpTimer.text = "Record: 00.00";
+    }
+
     private void Update()
     {
         // Check if the T key is pressed
@@ -72,7 +77,7 @@ public class Timer : MonoBehaviour
         while (true)
         {
             elapsedTime += Time.deltaTime;
-            tmpTimer.text = "Time: " + elapsedTime.ToString("F2");  // Display the elapsed time
+            tmpTimer.text = "Record: " + elapsedTime.ToString("F2");  // Display the elapsed time
             yield return null;
         }
     }

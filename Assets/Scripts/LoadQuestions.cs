@@ -44,9 +44,9 @@ public class LoadQuestions : MonoBehaviour
         if (questionsList != null && index >= 0 && index < questionsList.questions.Count)
         {
             Question question = questionsList.questions[index];
-            Debug.Log("Question ID: " + question.id);
-            Debug.Log("Question: " + question.question);
-            Debug.Log("Answer: " + question.answer);
+            //Debug.Log("Question ID: " + question.id);
+            //Debug.Log("Question: " + question.question);
+            //Debug.Log("Answer: " + question.answer);
         }
         else
         {

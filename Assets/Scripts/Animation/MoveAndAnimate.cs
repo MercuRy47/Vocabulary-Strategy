@@ -15,6 +15,13 @@ public class MoveAndAnimate : MonoBehaviour
 
     public static float damage;
 
+    [Header("Sound")]
+    public AudioClip attackSound;
+    //public AudioClip defendSound;
+    public AudioClip dashSound;
+
+    private AudioSource audioSource;
+
     void Start()
     {
         startPosition = transform.position;
@@ -22,6 +29,10 @@ public class MoveAndAnimate : MonoBehaviour
         {
             targetPosition = target.position;
         }
+
+        audioSource = GetComponent<AudioSource>();
+        audioSource.playOnAwake = false;
+        audioSource.Stop();
     }
 
     void Update()
@@ -39,6 +50,8 @@ public class MoveAndAnimate : MonoBehaviour
         isMoving = true; // กำหนดสถานะการเคลื่อนที่เป็นจริง
 
         // ค่อยๆขยับจาก x1 ไป x2
+        audioSource.clip = dashSound;
+        audioSource.Play();
         while (Vector3.Distance(transform.position, targetPosition) > 0.1f)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
@@ -54,17 +67,21 @@ public class MoveAndAnimate : MonoBehaviour
             {
                 damage = HealthManager.Instance.damageEnemy - HealthManager.Instance.defendPlayer;
                 if (damage <= 0) damage = HealthManager.Instance.damageEnemy * 0.3f;
-                if (damage <= HealthManager.Instance.damageEnemy / 2) damage = HealthManager.Instance.damageEnemy * 0.6f;
+                if (damage <= HealthManager.Instance.damageEnemy / 2) damage = HealthManager.Instance.damageEnemy * 0.5f;
                 if (ScaleSprite.shieldOn) damage *= 0.1f;
                 damage = damage / 2;
+                audioSource.clip = attackSound;
+                audioSource.Play();
                 HealthManager.Instance.AttackPlayer(damage);
             }
             else if (gameObject.name == "Knight_Blue")
             {
                 damage = HealthManager.Instance.damagePlayer - HealthManager.Instance.defendEnemy;
                 if (damage <= 0) damage = HealthManager.Instance.damagePlayer * 0.3f;
-                if (damage <= HealthManager.Instance.damagePlayer / 2) damage = HealthManager.Instance.damagePlayer * 0.6f;
+                if (damage <= HealthManager.Instance.damagePlayer / 2) damage = HealthManager.Instance.damagePlayer * 0.5f;
                 damage = damage / 2;
+                audioSource.clip = attackSound;
+                audioSource.Play();
                 HealthManager.Instance.AttackEnemy(damage);
             }
         }
@@ -74,6 +91,8 @@ public class MoveAndAnimate : MonoBehaviour
         yield return new WaitForSeconds(IdleAnimation.length);
 
         // ค่อยๆขยับจาก x2 กลับไป x1
+        audioSource.clip = dashSound;
+        audioSource.Play();
         while (Vector3.Distance(transform.position, startPosition) > 0.1f)
         {
             transform.position = Vector3.MoveTowards(transform.position, startPosition, speed * Time.deltaTime);

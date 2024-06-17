@@ -30,6 +30,11 @@ public class UIManager : MonoBehaviour
     public GameObject rightButton6;
     public TextMeshProUGUI rightButton6TMP;
 
+    [Header("Sound")]
+    public AudioClip buySound;
+    public AudioClip reviveSound;
+    
+    private AudioSource audioSource;
     private int price;
     public static float currentCoin;
     private int AtkLevel = 0;
@@ -46,6 +51,10 @@ public class UIManager : MonoBehaviour
         currentCoin = 0;
         UpdateCoin();
         StartRightUI();
+
+        audioSource = GetComponent<AudioSource>();
+        audioSource.playOnAwake = false;
+        audioSource.Stop();
     }
 
     private void Update()
@@ -56,12 +65,12 @@ public class UIManager : MonoBehaviour
 
     public void UpdateCoin()
     {
-        coinTMP.text = $"{currentCoin}$";
+        coinTMP.text = $"{(int)currentCoin}$";
     }
 
     public void UpdateStats()
     {
-        statsTMP.text = $"Correct: {CheckAnswer.correctScore} \nWrong: {CheckAnswer.wrongScore} \nAttack: {(int)HealthManager.Instance.damagePlayer} \nDefend: {(int)HealthManager.Instance.defendPlayer} \nPassive: >W< \nCoin Bonus: x{CoinBonus}";
+        statsTMP.text = $"Correct: {CheckAnswer.correctScore} \nWrong: {CheckAnswer.wrongScore} \nAttack: {(int)HealthManager.Instance.damagePlayer} \nDefend: {(int)HealthManager.Instance.defendPlayer} \nPassive: Atk. x{PassiveBuf}/ Def. x{PassiveBuf} \nCoin Bonus: x{CoinBonus}";
     }
 
     public void StartRightUI()
@@ -101,6 +110,8 @@ public class UIManager : MonoBehaviour
         if (currentCoin < price) return;
 
         currentCoin -= price;
+        audioSource.clip = buySound;
+        audioSource.Play();
         AtkLevel++;
         HealthManager.Instance.damagePlayer += 2;
         UpdateCoin();
@@ -144,6 +155,8 @@ public class UIManager : MonoBehaviour
         if (currentCoin < price) return;
 
         currentCoin -= price;
+        audioSource.clip = buySound;
+        audioSource.Play();
         DefLevel++;
         HealthManager.Instance.defendPlayer += 2;
         UpdateCoin();
@@ -187,6 +200,8 @@ public class UIManager : MonoBehaviour
         if (currentCoin < price) return;
 
         currentCoin -= price;
+        audioSource.clip = buySound;
+        audioSource.Play();
         PassiveLevel++;
         PassiveBuf += 0.1f;
         HealthManager.Instance.damagePlayer *= PassiveBuf;
@@ -223,6 +238,8 @@ public class UIManager : MonoBehaviour
                 HealthManager.Instance.healthPlayer += health;
             }
             currentCoin -= price;
+            audioSource.clip = reviveSound;
+            audioSource.Play();
         }
         else
         {
@@ -257,6 +274,8 @@ public class UIManager : MonoBehaviour
         if (currentCoin < price) return;
 
         currentCoin -= price;
+        audioSource.clip = buySound;
+        audioSource.Play();
         CoinLevel++;
         CoinBonus += 0.2f;
         UpdateCoin();

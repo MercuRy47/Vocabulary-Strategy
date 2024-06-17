@@ -12,13 +12,18 @@ public class QuestionsRespon : MonoBehaviour
     public GameObject questionsOff;
     public GameObject descriptionPage;
 
-    public TextMeshProUGUI tmpScore;
     public TextMeshProUGUI tmpScoreBar;
 
     public TextMeshProUGUI tmpQuestion;
     public TextMeshProUGUI tmpOption1;
     public TextMeshProUGUI tmpOption2;
     public TextMeshProUGUI tmpOption3;
+
+    public AudioClip coinSound;
+
+    [Header("Buttons")]
+    public GameObject optionsButtons;
+    public GameObject continueButton;
 
     private List<int> usedNumbers = new List<int>();
     private int maxNumber = 29;
@@ -30,6 +35,7 @@ public class QuestionsRespon : MonoBehaviour
     public int questionCount = 0; // Counter for the number of times randomQuestion() has been called
 
     private LoadQuestions loadQuestions;
+    private AudioSource audioSource;
 
     private void Awake()
     {
@@ -52,11 +58,19 @@ public class QuestionsRespon : MonoBehaviour
         loadQuestions.LoadJson(); // Load the JSON file
         //randomQuestion();
         //CountTime.Instance.StartCountdown();
+
+        audioSource = GetComponent<AudioSource>();
+        audioSource.playOnAwake = false;
+        audioSource.Stop();
+
+        optionsButtons.SetActive(true);
+        continueButton.SetActive(false);
+
     }
 
     private void Update()
     {
-        tmpScore.SetText("Correct: " + CheckAnswer.correctScore + "\nWrong: " + CheckAnswer.wrongScore);
+        //tmpScore.SetText("Correct: " + CheckAnswer.correctScore + "\nWrong: " + CheckAnswer.wrongScore);
         //Debug.Log(questionCount + " : " + times);
 
     }
@@ -104,6 +118,12 @@ public class QuestionsRespon : MonoBehaviour
             Timer.Instance.StopCountTimer();
             questionCount = 0;
             FightingManager.buttonCount = 0;
+            RandomEnemy.Instance.DisplayRandomText();
+            optionsButtons.SetActive(true);
+            continueButton.SetActive(false);
+            audioSource.clip = coinSound;
+            audioSource.Play();
+            CheckAnswer.comboScore = 0;
             return;
         }
 
@@ -125,7 +145,7 @@ public class QuestionsRespon : MonoBehaviour
         answerRandom1 = loadQuestions.questionsList.questions[number1].answer;
         answerRandom2 = loadQuestions.questionsList.questions[number2].answer;
 
-        Debug.Log("ID: " + id + " Question: " + question + " Answer: " + correctAnswer);
+        //Debug.Log("ID: " + id + " Question: " + question + " Answer: " + correctAnswer);
 
         // Generate random indices for the options
         int[] optionIndices = { 0, 1, 2 };

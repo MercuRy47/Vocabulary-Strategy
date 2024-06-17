@@ -18,6 +18,10 @@ public class FightingManager : MonoBehaviour
     private MoveAndAnimate script1;
     private MoveAndAnimate script2;
 
+    [Header("Buttons")]
+    public GameObject optionsButtons;
+    public GameObject continueButton;
+
     public static int buttonCount;
 
     void Start()
@@ -69,7 +73,7 @@ public class FightingManager : MonoBehaviour
     IEnumerator AttackCooldown()
     {
         script1.StartMoving();
-
+        
         if (HealthManager.Instance.healthEnemy <= 0)
         {
             yield break; // หยุดการทำงานของ Coroutine ถ้าเงื่อนไขเป็นจริง
@@ -81,6 +85,9 @@ public class FightingManager : MonoBehaviour
         if (HealthManager.Instance.healthEnemy > 0) // ตรวจสอบอีกครั้งก่อนเริ่มเคลื่อนที่ script2
         {
             script2.StartMoving();
+            yield return new WaitForSeconds(2.5f);
+            optionsButtons.SetActive(false);
+            continueButton.SetActive(true);
         }
     }
 
@@ -103,6 +110,9 @@ public class FightingManager : MonoBehaviour
         yield return new WaitForSeconds(2f);
         shieldPlayer.SetActive(false);
         ScaleSprite.Instance.ResetScale();
+        yield return new WaitForSeconds(0.5f);
+        optionsButtons.SetActive(false);
+        continueButton.SetActive(true);
     }
 
     private void SetOrderInLayer(GameObject obj, int order)
