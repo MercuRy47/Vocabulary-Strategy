@@ -1,3 +1,154 @@
 {
-    "questions": []
+    "questions": [
+        {
+            "id": "B1-001",
+            "question": "อย่างแน่นอน",
+            "answer": "absolutely (adv)"
+        },
+        {
+            "id": "B1-002",
+            "question": "ฝุ่น",
+            "answer": "dust (n)"
+        },
+        {
+            "id": "B1-003",
+            "question": "ตรวจสอบ, พิจารณา",
+            "answer": "examine (v)"
+        },
+        {
+            "id": "B1-004",
+            "question": "ยกเว้น",
+            "answer": "except (conj)"
+        },
+        {
+            "id": "B1-005",
+            "question": "ทั่วโลก",
+            "answer": "global (adj)"
+        },
+        {
+            "id": "B1-006",
+            "question": "ผลกระทบ, ส่งผลกระทบ",
+            "answer": "impact (n., v)"
+        },
+        {
+            "id": "B1-007",
+            "question": "การนำเข้า, นำเข้า",
+            "answer": "import (n., v)"
+        },
+        {
+            "id": "B1-008",
+            "question": "ความชอบ",
+            "answer": "like (n)"
+        },
+        {
+            "id": "B1-009",
+            "question": "ข้อจำกัด, จำกัด",
+            "answer": "limit (n., v)"
+        },
+        {
+            "id": "B1-010",
+            "question": "ริมฝีปาก",
+            "answer": "lip (n)"
+        },
+        {
+            "id": "B1-011",
+            "question": "ของเหลว, เป็นของเหลว",
+            "answer": "liquid (n., adj)"
+        },
+        {
+            "id": "B1-012",
+            "question": "ทรงพลัง",
+            "answer": "powerful (adj)"
+        },
+        {
+            "id": "B1-013",
+            "question": "บทกวี",
+            "answer": "poetry (n)"
+        },
+        {
+            "id": "B1-014",
+            "question": "คุณสมบัติ",
+            "answer": "qualification (n)"
+        },
+        {
+            "id": "B1-015",
+            "question": "มีคุณสมบัติ",
+            "answer": "qualified (adj)"
+        },
+        {
+            "id": "B1-016",
+            "question": "ลาออก, เลิก",
+            "answer": "quit (v)"
+        },
+        {
+            "id": "B1-017",
+            "question": "เตือน",
+            "answer": "remind (v)"
+        },
+        {
+            "id": "B1-018",
+            "question": "ห่างไกล",
+            "answer": "remote (adj)"
+        },
+        {
+            "id": "B1-019",
+            "question": "ปกครอง, ควบคุม",
+            "answer": "rule (v)"
+        },
+        {
+            "id": "B1-020",
+            "question": "ความปลอดภัย",
+            "answer": "safety (n)"
+        },
+        {
+            "id": "B1-021",
+            "question": "แพร่กระจาย",
+            "answer": "spread (v)"
+        },
+        {
+            "id": "B1-022",
+            "question": "เด้ง, กระโดด",
+            "answer": "spring (v)"
+        },
+        {
+            "id": "B1-023",
+            "question": "คนแปลกหน้า",
+            "answer": "stranger (n)"
+        },
+        {
+            "id": "B1-024",
+            "question": "ความแข็งแรง",
+            "answer": "strength (n)"
+        },
+        {
+            "id": "B1-025",
+            "question": "ไม่น่าเป็นไปได้",
+            "answer": "unlikely (adj)"
+        },
+        {
+            "id": "B1-026",
+            "question": "รุ่น, เวอร์ชัน",
+            "answer": "version (n)"
+        },
+        {
+            "id": "B1-027",
+            "question": "เหยื่อ",
+            "answer": "victim (n)"
+        },
+        {
+            "id": "B1-028",
+            "question": "ความกังวล",
+            "answer": "worry (n)"
+        },
+        {
+            "id": "B1-029",
+            "question": "แย่ลง",
+            "answer": "worse (adv)"
+        },
+        {
+            "id": "B1-030",
+            "question": "คนหนุ่มสาว, เยาวชน",
+            "answer": "young (n)"
+        }
+    ]
 }

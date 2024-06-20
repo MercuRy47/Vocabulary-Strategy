@@ -28,6 +28,21 @@ public class SettingManager : MonoBehaviour
             isTrue = !isTrue;
         }
 
+    }public void MusicOnOff()
+    {
+        if (isTrue)
+        {
+            tmpSound.SetText("Music OFF");
+            BackgroundMusic.Instance.StopBackgroundMusic();
+            isTrue = !isTrue;
+        }
+        else
+        {
+            tmpSound.SetText("Music ON");
+            BackgroundMusic.Instance.PlayBackgroundMusic();
+            isTrue = !isTrue;
+        }
+
     }
 
     public void QuitGame()

@@ -2,153 +2,153 @@
     "questions": [
         {
             "id": "A2-001",
-            "question": "สวมใส่",
-            "answer": "wear"
+            "question": "ความสามารถ",
+            "answer": "ability (n.)"
         },
         {
             "id": "A2-002",
-            "question": "สวยงาม",
-            "answer": "beautiful"
+            "question": "สามารถ",
+            "answer": "able (adj.)"
         },
         {
             "id": "A2-003",
-            "question": "ขวัญใจ",
-            "answer": "beloved"
+            "question": "ยอมรับ",
+            "answer": "accept (v.)"
         },
         {
             "id": "A2-004",
-            "question": "กลายเป็น",
-            "answer": "become"
+            "question": "ก่อน",
+            "answer": "before (conj., adv.)"
         },
         {
             "id": "A2-005",
-            "question": "เริ่มต้น",
-            "answer": "begin"
+            "question": "ประพฤติ",
+            "answer": "behave (v.)"
         },
         {
             "id": "A2-006",
-            "question": "ตัวแทน",
-            "answer": "representative"
+            "question": "พฤติกรรม",
+            "answer": "behavior (n.)"
         },
         {
             "id": "A2-007",
-            "question": "ลืม",
-            "answer": "forget"
+            "question": "ระหว่าง",
+            "answer": "between (adv.)"
         },
         {
             "id": "A2-008",
-            "question": "เจ้าหน้าที่",
-            "answer": "officer"
+            "question": "การดูแล, ดูแล",
+            "answer": "care (n., v.)"
         },
         {
             "id": "A2-009",
-            "question": "อายุ",
-            "answer": "age"
+            "question": "ระมัดระวัง",
+            "answer": "careful (adj.)"
         },
         {
             "id": "A2-010",
-            "question": "สถานการณ์",
-            "answer": "situation"
+            "question": "การตั้งแคมป์",
+            "answer": "camping (n.)"
         },
         {
             "id": "A2-011",
-            "question": "ความคิดเห็น",
-            "answer": "opinion"
+            "question": "การขับรถ",
+            "answer": "driving (n.)"
         },
         {
             "id": "A2-012",
-            "question": "ร้องไห้",
-            "answer": "cry"
+            "question": "หยด, ทำหล่น",
+            "answer": "drop (v.)"
         },
         {
             "id": "A2-013",
-            "question": "เพื่อนร่วมงาน",
-            "answer": "colleague"
+            "question": "ได้รับ (รายได้)",
+            "answer": "earn (v.)"
         },
         {
             "id": "A2-014",
-            "question": "คำสั่ง",
-            "answer": "command"
+            "question": "ผลกระทบ",
+            "answer": "effect (n.)"
         },
         {
             "id": "A2-015",
-            "question": "ผู้ชาย",
-            "answer": "man"
+            "question": "จ้างงาน",
+            "answer": "employ (v.)"
         },
         {
             "id": "A2-016",
-            "question": "สาว",
-            "answer": "woman"
+            "question": "ภาพยนตร์, ถ่ายทำ",
+            "answer": "film (n., v.)"
         },
         {
             "id": "A2-017",
-            "question": "เสียง",
-            "answer": "sound"
+            "question": "รอบชิงชนะเลิศ",
+            "answer": "final (n.)"
         },
         {
             "id": "A2-018",
-            "question": "โต๊ะทำงาน",
-            "answer": "desk"
+            "question": "ในที่สุด",
+            "answer": "finally (adv.)"
         },
         {
             "id": "A2-019",
-            "question": "ช่วย",
-            "answer": "help"
+            "question": "โชคดี",
+            "answer": "fortunately (adv.)"
         },
         {
             "id": "A2-020",
-            "question": "ความรู้สึก",
-            "answer": "feeling"
+            "question": "เป้าหมาย",
+            "answer": "goal (n.)"
         },
         {
             "id": "A2-021",
-            "question": "หวาน",
-            "answer": "sweet"
+            "question": "ทอง, สีทอง",
+            "answer": "gold (n., adj.)"
         },
         {
             "id": "A2-022",
-            "question": "หลับ",
-            "answer": "sleep"
+            "question": "ความดี",
+            "answer": "good (n.)"
         },
         {
             "id": "A2-023",
-            "question": "พิมพ์",
-            "answer": "type"
+            "question": "รัฐบาล",
+            "answer": "government (n.)"
         },
         {
             "id": "A2-024",
-            "question": "คนอื่น",
-            "answer": "other"
+            "question": "มนุษย์, มนุษยชาติ",
+            "answer": "human (adj., n.)"
         },
         {
             "id": "A2-025",
-            "question": "ดำเนินการ",
-            "answer": "operate"
+            "question": "เจ็บ, ที่ได้รับบาดเจ็บ",
+            "answer": "hurt (v., adj.)"
         },
         {
             "id": "A2-026",
-            "question": "เจ้าของ",
-            "answer": "owner"
+            "question": "อุดมคติ",
+            "answer": "ideal (adj.)"
         },
         {
             "id": "A2-027",
-            "question": "สุขภาพ",
-            "answer": "health"
+            "question": "ระบุ",
+            "answer": "identify (v.)"
         },
         {
             "id": "A2-028",
-            "question": "สี",
-            "answer": "color"
+            "question": "ฉลาด",
+            "answer": "intelligent (adj.)"
         },
         {
             "id": "A2-029",
-            "question": "ความสุข",
-            "answer": "happiness"
+            "question": "รางวัล",
+            "answer": "prize (n.)"
         },
         {
             "id": "A2-030",
-            "question": "ดีใจ",
-            "answer": "glad"
+            "question": "กระบวนการ",
+            "answer": "process (n.)"
         }
     ]
 }

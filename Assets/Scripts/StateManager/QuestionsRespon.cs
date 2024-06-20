@@ -76,7 +76,7 @@ public class QuestionsRespon : MonoBehaviour
     }
 
     public void runStart()
-    {
+    {       
         descriptionPage.SetActive(false);
         if (CountStart.Instance != null)
         {

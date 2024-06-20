@@ -1,0 +1,154 @@
+{
+    "questions": [
+        {
+            "id": "mix-001",
+            "question": "ซื้อ, สามารถซื้อได้",
+            "answer": "buy(v.)"
+        },
+        {
+            "id": "mix-002",
+            "question": "กล้องถ่ายรูป",
+            "answer": "camera(n.)"
+        },
+        {
+            "id": "mix-003",
+            "question": "หนังสือพิมพ์",
+            "answer": "newspaper(n.)"
+        },
+        {
+            "id": "mix-004",
+            "question": "มั่นใจ, เชื่อถือได้",
+            "answer": "positive(adj.)"
+        },
+        {
+            "id": "mix-005",
+            "question": "ในไม่ช้า",
+            "answer": "soon(adv.)"
+        },
+        {
+            "id": "mix-006",
+            "question": "ปรากฏ",
+            "answer": "appear(v.)"
+        },
+        {
+            "id": "mix-007",
+            "question": "รัฐบาล, ระบบการปกครอง",
+            "answer": "government(n.)"
+        },
+        {
+            "id": "mix-008",
+            "question": "ต่างประเทศ, ต่างชาติ",
+            "answer": "foreign(adj.)"
+        },
+        {
+            "id": "mix-009",
+            "question": "โรค",
+            "answer": "disease(n.)"
+        },
+        {
+            "id": "mix-010",
+            "question": "อ้างอิง, กล่าวถึง",
+            "answer": "refer(v.)"
+        },
+        {
+            "id": "mix-011",
+            "question": "ทั่วโลก, ทั้งหมด",
+            "answer": "global(adj.)"
+        },
+        {
+            "id": "mix-012",
+            "question": "ทำให้สนุกสนาน, ต้อนรับ",
+            "answer": "entertain(v.)"
+        },
+        {
+            "id": "mix-013",
+            "question": "ทางหลวง",
+            "answer": "highway(n.)"
+        },
+        {
+            "id": "mix-014",
+            "question": "โอกาส, จังหวะ",
+            "answer": "occasion(n.)"
+        },
+        {
+            "id": "mix-015",
+            "question": "ธง",
+            "answer": "flag(n.)"
+        },
+        {
+            "id": "mix-016",
+            "question": "ละทิ้ง, ปล่อย",
+            "answer": "abandon(v.)"
+        },
+        {
+            "id": "mix-017",
+            "question": "มะเร็ง, เนื้อร้าย",
+            "answer": "cancer(n.)"
+        },
+        {
+            "id": "mix-018",
+            "question": "ขัดจังหวะ, ตัดบท",
+            "answer": "interrupt(v.)"
+        },
+        {
+            "id": "mix-019",
+            "question": "เงา, ร่มเงา",
+            "answer": "shadow(n.)"
+        },
+        {
+            "id": "mix-020",
+            "question": "ศัลยกรรม",
+            "answer": "surgery(n.)"
+        },
+        {
+            "id": "mix-021",
+            "question": "สนามกีฬา, สังเวียน",
+            "answer": "arena(n.)"
+        },
+        {
+            "id": "mix-022",
+            "question": "ทุจริต",
+            "answer": "corrupt(adj.)"
+        },
+        {
+            "id": "mix-023",
+            "question": "ผู้รักษาการแทน, ตัวแทน",
+            "answer": "deputy(n.)"
+        },
+        {
+            "id": "mix-024",
+            "question": "ชั่วนิรันดร, ตลอดไป",
+            "answer": "eternal(adj.)"
+        },
+        {
+            "id": "mix-025",
+            "question": "โอบกอด, ยอมรับ",
+            "answer": "embrace(adj.)"
+        },
+        {
+            "id": "mix-026",
+            "question": "การทำทาน, การกุศล",
+            "answer": "charity(n.)"
+        },
+        {
+            "id": "mix-027",
+            "question": "เศร้าโศก, ว่างเปล่า",
+            "answer": "bleak(adj.)"
+        },
+        {
+            "id": "mix-028",
+            "question": "หรูหรา, ฟุ่มเฟือย",
+            "answer": "posh(adj.)"
+        },
+        {
+            "id": "mix-029",
+            "question": "มุ่งมั่น, ดิ้นรน",
+            "answer": "strive(v.)"
+        },
+        {
+            "id": "mix-030",
+            "question": "คุณงามความดี, ศีลธรรม",
+            "answer": "virtue(n.)"
+        }
+    ]
+}

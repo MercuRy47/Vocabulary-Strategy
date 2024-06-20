@@ -60,49 +60,35 @@ public class SummarizeManager : MonoBehaviour
         if (HealthManager.Instance.healthPlayer <= 0)
         {
             stars = 0;
-            summarize2TMP.text = $"Score: {finalScore} \nRecord: {Timer.Instance.elapsedTime.ToString("F2")} \nCorrect Answer: {CheckAnswer.correctScore} \nWrong Answer: {CheckAnswer.wrongScore}";
+            summarize2TMP.text = $"Score: {finalScore} \nRecord: {timeSpent.ToString("F2")} \nCorrect Answer: {CheckAnswer.correctScore} \nWrong Answer: {CheckAnswer.wrongScore}";
         }
         if (HealthManager.Instance.healthEnemy <= 0)
         {
             script1.count = stars;
-            summarizeTMP.text = $"Score: {finalScore} \nRecord: {Timer.Instance.elapsedTime.ToString("F2")} \nCorrect Answer: {CheckAnswer.correctScore} \nWrong Answer: {CheckAnswer.wrongScore}";
+            summarizeTMP.text = $"Score: {finalScore} \nRecord: {timeSpent.ToString("F2")} \nCorrect Answer: {CheckAnswer.correctScore} \nWrong Answer: {CheckAnswer.wrongScore}";
             CheckScenes();
         }
-
     }
 
     public int CalculateScore()
     {
-        int baseScore = correctScore * 10;
-        int penaltyScore = wrongScore * -5;
-        float averageTimePerQuestion = timeSpent / totalQuestions;
-
-        float timePenalty = 0;
-        if (averageTimePerQuestion > 3)
-        {
-            timePenalty = (averageTimePerQuestion - 3) * totalQuestions * -2;
-        }
-
-        int totalScore = Mathf.Max(0, (int)(baseScore + penaltyScore + timePenalty));
-        return totalScore;
+        int baseScore = (int)(((float)correctScore / totalQuestions) * 100);
+        return baseScore;
     }
 
     public int CalculateStars(int score)
     {
-        int maxPossibleScore = totalQuestions * 10; // คำนวณคะแนนเต็มจากจำนวนคำตอบที่ถูกต้องทั้งหมด
-        float correctAnswerPercentage = (float)correctScore / totalQuestions;
-
-        if (correctAnswerPercentage >= 0.8f)
+        if (score >= 80)
         {
-            return 3; // 3 ดาวถ้าคะแนน >= 80% ของคะแนนเต็ม
+            return 3; // 3 stars if score >= 80
         }
-        else if (correctAnswerPercentage >= 0.5f)
+        else if (score >= 50)
         {
-            return 2; // 2 ดาวถ้าคะแนน >= 50% ของคะแนนเต็ม
+            return 2; // 2 stars if score >= 50
         }
         else
         {
-            return 1; // 1 ดาวถ้าคะแนน < 50% ของคะแนนเต็ม
+            return 1; // 1 star if score < 50
         }
     }
 

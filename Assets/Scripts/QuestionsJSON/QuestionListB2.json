@@ -1,3 +1,154 @@
 {
-    "questions": []
+    "questions": [
+        {
+            "id": "B2-001",
+            "question": "ละทิ้ง, ทอดทิ้ง",
+            "answer": "abandon (v)"
+        },
+        {
+            "id": "B2-002",
+            "question": "ปรับตัว, ปรับเปลี่ยน",
+            "answer": "adapt (v)"
+        },
+        {
+            "id": "B2-003",
+            "question": "การชนะ",
+            "answer": "beat (n)"
+        },
+        {
+            "id": "B2-004",
+            "question": "ท้าทาย",
+            "answer": "challenge (v)"
+        },
+        {
+            "id": "B2-005",
+            "question": "ทั้งหมด, เต็มที่",
+            "answer": "entire (adj)"
+        },
+        {
+            "id": "B2-006",
+            "question": "คาดหวัง, ความมุ่งหวัง",
+            "answer": "expectation (n)"
+        },
+        {
+            "id": "B2-007",
+            "question": "คว้า, จับ",
+            "answer": "grab (v)"
+        },
+        {
+            "id": "B2-008",
+            "question": "จัดเกรด",
+            "answer": "grade (v)"
+        },
+        {
+            "id": "B2-009",
+            "question": "จัดการ, รับมือ",
+            "answer": "handle (v.)"
+        },
+        {
+            "id": "B2-010",
+            "question": "สวรรค์",
+            "answer": "heaven (n)"
+        },
+        {
+            "id": "B2-011",
+            "question": "ตลก, ขบขัน",
+            "answer": "humorous (adj)"
+        },
+        {
+            "id": "B2-012",
+            "question": "ประทับใจ",
+            "answer": "impress (v)"
+        },
+        {
+            "id": "B2-013",
+            "question": "ประทับใจ",
+            "answer": "impressed (adj)"
+        },
+        {
+            "id": "B2-014",
+            "question": "ความสุข",
+            "answer": "joy (n)"
+        },
+        {
+            "id": "B2-015",
+            "question": "อ้างเหตุผล",
+            "answer": "justify (v)"
+        },
+        {
+            "id": "B2-016",
+            "question": "ทิวทัศน์",
+            "answer": "landscape (n)"
+        },
+        {
+            "id": "B2-017",
+            "question": "ลึกลับ, ลักษณะที่ลึกลับ",
+            "answer": "mysterious (adj)"
+        },
+        {
+            "id": "B2-018",
+            "question": "แต่ก็ตาม, แม้กระทั่ง",
+            "answer": "nevertheless (adv)"
+        },
+        {
+            "id": "B2-019",
+            "question": "การเผยแพร่",
+            "answer": "publication (n)"
+        },
+        {
+            "id": "B2-020",
+            "question": "มีเหตุผล, พอเพียง",
+            "answer": "reasonable (adj)"
+        },
+        {
+            "id": "B2-021",
+            "question": "ข้อกำหนด, ความต้องการ",
+            "answer": "requirement (n)"
+        },
+        {
+            "id": "B2-022",
+            "question": "เป็นปกติ, ประจำ",
+            "answer": "routine (adj)"
+        },
+        {
+            "id": "B2-023",
+            "question": "มีนัยสำคัญ, สำคัญ",
+            "answer": "significant (adj)"
+        },
+        {
+            "id": "B2-024",
+            "question": "สงสัย, ผู้ต้องสงสัย",
+            "answer": "suspect (v., n)"
+        },
+        {
+            "id": "B2-025",
+            "question": "ก่อกวน, ให้ความยุ่งเหยิง",
+            "answer": "trouble (v)"
+        },
+        {
+            "id": "B2-026",
+            "question": "อย่างแท้จริง",
+            "answer": "truly (adv)"
+        },
+        {
+            "id": "B2-027",
+            "question": "ที่ไม่รู้จัก, ไม่ทราบ",
+            "answer": "unknown (adj)"
+        },
+        {
+            "id": "B2-028",
+            "question": "ชัยชนะ",
+            "answer": "victory (n)"
+        },
+        {
+            "id": "B2-029",
+            "question": "กระซิบ, เสียงกระซิบ",
+            "answer": "whisper (v., n)"
+        },
+        {
+            "id": "B2-030",
+            "question": "สิ่งแย่ที่สุด",
+            "answer": "worst (n)"
+        }
+    ]
 }

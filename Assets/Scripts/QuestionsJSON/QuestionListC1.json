@@ -1,3 +1,154 @@
 {
-    "questions": []
+    "questions": [
+        {
+            "id": "C1-001",
+            "question": "ทำร้าย, กล่าวร้าย",
+            "answer": "abuse(v.)"
+        },
+        {
+            "id": "C1-002",
+            "question": "โรงเรียน, สถาบันการศึกษา",
+            "answer": "academy(n.)"
+        },
+        {
+            "id": "C1-003",
+            "question": "เปรี้ยว, รุนแรง",
+            "answer": "acid(adj.)"
+        },
+        {
+            "id": "C1-004",
+            "question": "ความชอบ, ความเมตตา",
+            "answer": "affection(n.)"
+        },
+        {
+            "id": "C1-005",
+            "question": "กลุ่ม, ก้อน",
+            "answer": "cluster(n.)"
+        },
+        {
+            "id": "C1-006",
+            "question": "สงวน, เก็บรักษา",
+            "answer": "conserve(v.)"
+        },
+        {
+            "id": "C1-007",
+            "question": "โชคชะตา, ชะตากรรม",
+            "answer": "destiny(n.)"
+        },
+        {
+            "id": "C1-008",
+            "question": "ลัทธิ, การบูชา",
+            "answer": "cult(n.)"
+        },
+        {
+            "id": "C1-009",
+            "question": "ไม่มีที่สิ้นสุด, ไม่มีขอบเขต",
+            "answer": "endless(adj.)"
+        },
+        {
+            "id": "C1-010",
+            "question": "การหมั้น, ข้อตกลง",
+            "answer": "engagement(n.)"
+        },
+        {
+            "id": "C1-011",
+            "question": "ของเหลว",
+            "answer": "fluid(n.)"
+        },
+        {
+            "id": "C1-012",
+            "question": "การแนะนำ, เครื่องนำทาง",
+            "answer": "guidance(n.)"
+        },
+        {
+            "id": "C1-013",
+            "question": "ความกลมกลืน, การลงรอยกัน",
+            "answer": "harmony(n.)"
+        },
+        {
+            "id": "C1-014",
+            "question": "ความไม่รู้",
+            "answer": "ignorance(n.)"
+        },
+        {
+            "id": "C1-015",
+            "question": "มีความหวัง, เต็มไปด้วยความหวัง",
+            "answer": "hopeful(adj.)"
+        },
+        {
+            "id": "C1-016",
+            "question": "ความจงรักภักดี, ความซื่อสัตย์",
+            "answer": "loyalty(n.)"
+        },
+        {
+            "id": "C1-017",
+            "question": "จัดการ",
+            "answer": "manipulater(v.)"
+        },
+        {
+            "id": "C1-018",
+            "question": "เรื่องเหลวไหล, สิ่งไร้สาระ",
+            "answer": "nonsense(n.)"
+        },
+        {
+            "id": "C1-019",
+            "question": "ยืนกราน, ดื้อรั้น",
+            "answer": "persist(v.)"
+        },
+        {
+            "id": "C1-020",
+            "question": "ไม่ดิ้นรน, อดทน",
+            "answer": "passive(adj.)"
+        },
+        {
+            "id": "C1-021",
+            "question": "นักล่า",
+            "answer": "predator(n.)"
+        },
+        {
+            "id": "C1-022",
+            "question": "การเปิดเผย, การแสดงให้เห็น",
+            "answer": "revelation(n.)"
+        },
+        {
+            "id": "C1-023",
+            "question": "นักบุญ",
+            "answer": "saint(n.)"
+        },
+        {
+            "id": "C1-024",
+            "question": "ดีเลิศ, ยอดเยี่ยม",
+            "answer": "superb(adj.)"
+        },
+        {
+            "id": "C1-025",
+            "question": "ล่อลวง, ยั่วยวน",
+            "answer": "tempt(v.)"
+        },
+        {
+            "id": "C1-026",
+            "question": "ครุ่นคิด, ไตร่ตรอง",
+            "answer": "thoughtful(adj.)"
+        },
+        {
+            "id": "C1-027",
+            "question": "ของรางวัล, ชองที่ระลึก",
+            "answer": "trophy(n.)"
+        },
+        {
+            "id": "C1-028",
+            "question": "พื้นฐาน, เป็นรากฐาน",
+            "answer": "underlying(adj.)"
+        },
+        {
+            "id": "C1-029",
+            "question": "ตรวจสอบ, ยืนยัน",
+            "answer": "verify(v.)"
+        },
+        {
+            "id": "C1-030",
+            "question": "การผลิต, ผลผลิต",
+            "answer": "yield(n.)"
+        }
+    ]
 }

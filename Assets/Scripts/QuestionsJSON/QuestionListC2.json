@@ -1,3 +1,154 @@
 {
-    "questions": []
+    "questions": [
+        {
+            "id": "C2-001",
+            "question": "ปรารถนา, ต้องการ",
+            "answer": "crave(v.)"
+        },
+        {
+            "id": "C2-002",
+            "question": "เส้นทแยง, อคติ",
+            "answer": "bias(n.)"
+        },
+        {
+            "id": "C2-003",
+            "question": "การเนรเทศ",
+            "answer": "exile(n.)"
+        },
+        {
+            "id": "C2-004",
+            "question": "กระโดด, ข้าม",
+            "answer": "leap(v.)"
+        },
+        {
+            "id": "C2-005",
+            "question": "มรดก, ของขวัญ",
+            "answer": "legacy(n.)"
+        },
+        {
+            "id": "C2-006",
+            "question": "ถูกต้องตามกฎหมาย",
+            "answer": "legitimate(adj.)"
+        },
+        {
+            "id": "C2-007",
+            "question": "ข้อดี",
+            "answer": "merit(n.)"
+        },
+        {
+            "id": "C2-008",
+            "question": "ลุกขึ้น, ปีนขึ้น",
+            "answer": "mount(v.)"
+        },
+        {
+            "id": "C2-009",
+            "question": "สามารถ, หลักแหลม",
+            "answer": "able(adj.)"
+        },
+        {
+            "id": "C2-010",
+            "question": "ทันที, ฉับพลัน",
+            "answer": "abrupt(adj.)"
+        },
+        {
+            "id": "C2-011",
+            "question": "แพร่พันธ์ุ, เลี้ยง",
+            "answer": "breed(v.)"
+        },
+        {
+            "id": "C2-012",
+            "question": "ริม, ขอบ",
+            "answer": "brink(n.)"
+        },
+        {
+            "id": "C2-013",
+            "question": "ความบ้าระห่ำ",
+            "answer": "frenzy(n.)"
+        },
+        {
+            "id": "C2-014",
+            "question": "สะดวก, มีประโยชน์",
+            "answer": "handy(adj.)"
+        },
+        {
+            "id": "C2-015",
+            "question": "แขวน, ห้อย",
+            "answer": "hang(v.)"
+        },
+        {
+            "id": "C2-016",
+            "question": "เสี่ยงอันตราย",
+            "answer": "้hazardous(adj.)"
+        },
+        {
+            "id": "C2-017",
+            "question": "แรงงาน, กรรมกร",
+            "answer": "labour(n.)"
+        },
+        {
+            "id": "C2-018",
+            "question": "ในทำนองเดียวกัน",
+            "answer": "likewise(adv.)"
+        },
+        {
+            "id": "C2-019",
+            "question": "อุบัติเหตุ, เหตุร้าย",
+            "answer": "mishap(n.)"
+        },
+        {
+            "id": "C2-020",
+            "question": "ขณะนั้น, ชั่วขณะ",
+            "answer": "moment(n.)"
+        },
+        {
+            "id": "C2-021",
+            "question": "คนพื้นเมือง, คนท้องถิ่น",
+            "answer": "native(n.)"
+        },
+        {
+            "id": "C2-022",
+            "question": "ละเลย, ทอดทิ้ง",
+            "answer": "negligent(adj.)"
+        },
+        {
+            "id": "C2-023",
+            "question": "บังคับ, ผูกมัด",
+            "answer": "oblige(v.)"
+        },
+        {
+            "id": "C2-024",
+            "question": "ทัศนียภาพ, การสังเกต",
+            "answer": "outlook(n.)"
+        },
+        {
+            "id": "C2-025",
+            "question": "น่าสงสาร",
+            "answer": "pathetic(adj.)"
+        },
+        {
+            "id": "C2-026",
+            "question": "สังเกต, มองเห็น",
+            "answer": "perceive(v.)"
+        },
+        {
+            "id": "C2-027",
+            "question": "การทำให้เป็นจริง",
+            "answer": "realization(n.)"
+        },
+        {
+            "id": "C2-028",
+            "question": "มีเหตุผล, มีไหวพริบ",
+            "answer": "sensibly(adj.)"
+        },
+        {
+            "id": "C2-029",
+            "question": "ใฝ่ฝัน, อยาก",
+            "answer": "yearn(v.)"
+        },
+        {
+            "id": "C2-030",
+            "question": "คนบ้างาน",
+            "answer": "workaholic(n.)"
+        }
+    ]
 }

@@ -61,6 +61,7 @@ public class CountStart : MonoBehaviour
         GameObj2.SetActive(true);
         QuestionsRespon.Instance.runRandom();
         Timer.Instance.StartCountTimer();
+        BackgroundMusic.Instance.PlayBackgroundMusic();
         Debug.Log("Start");
     }
 }

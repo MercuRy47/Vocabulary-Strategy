@@ -65,23 +65,23 @@ public class MoveAndAnimate : MonoBehaviour
             yield return new WaitForSeconds(AttackAnimation.length);
             if (gameObject.name == "Torch_Red")
             {
+                audioSource.clip = attackSound;
+                audioSource.Play();
                 damage = HealthManager.Instance.damageEnemy - HealthManager.Instance.defendPlayer;
                 if (damage <= 0) damage = HealthManager.Instance.damageEnemy * 0.3f;
                 if (damage <= HealthManager.Instance.damageEnemy / 2) damage = HealthManager.Instance.damageEnemy * 0.5f;
                 if (ScaleSprite.shieldOn) damage *= 0.1f;
                 damage = damage / 2;
-                audioSource.clip = attackSound;
-                audioSource.Play();
                 HealthManager.Instance.AttackPlayer(damage);
             }
             else if (gameObject.name == "Knight_Blue")
             {
+                audioSource.clip = attackSound;
+                audioSource.Play();
                 damage = HealthManager.Instance.damagePlayer - HealthManager.Instance.defendEnemy;
                 if (damage <= 0) damage = HealthManager.Instance.damagePlayer * 0.3f;
                 if (damage <= HealthManager.Instance.damagePlayer / 2) damage = HealthManager.Instance.damagePlayer * 0.5f;
                 damage = damage / 2;
-                audioSource.clip = attackSound;
-                audioSource.Play();
                 HealthManager.Instance.AttackEnemy(damage);
             }
         }

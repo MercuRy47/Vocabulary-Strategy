@@ -2,153 +2,153 @@
     "questions": [
         {
             "id": "A1-001",
-            "question": "คน",
-            "answer": "person"
+            "question": "เกี่ยวกับ",
+            "answer": "about (adv.)"
         },
         {
             "id": "A1-002",
-            "question": "ใน",
-            "answer": "in"
+            "question": "กิจกรรม",
+            "answer": "activity (n.)"
         },
         {
             "id": "A1-003",
-            "question": "มี",
-            "answer": "have"
+            "question": "กลัว, เกรงกลัว, หวาดกลัว",
+            "answer": "afraid (adj.)"
         },
         {
             "id": "A1-004",
-            "question": "ทำ",
-            "answer": "do"
+            "question": "ตลอดเวลา, ตลอดไป, เป็นประจำ",
+            "answer": "always (adv.)"
         },
         {
             "id": "A1-005",
-            "question": "กิน",
-            "answer": "eat"
+            "question": "เป็น, อยู่, คือ",
+            "answer": "be (v., auxiliary v.)"
         },
         {
             "id": "A1-006",
-            "question": "เดิน",
-            "answer": "walk"
+            "question": "ห้องนอน",
+            "answer": "bedroom (n.)"
         },
         {
             "id": "A1-007",
-            "question": "ดู",
-            "answer": "see"
+            "question": "จักรยาน",
+            "answer": "bike (n.)"
         },
         {
             "id": "A1-008",
-            "question": "ไป",
-            "answer": "go"
+            "question": "สร้าง, ก่อสร้าง",
+            "answer": "build (v.)"
         },
         {
             "id": "A1-009",
-            "question": "อยู่",
-            "answer": "be"
+            "question": "ซื้อ",
+            "answer": "buy (v.)"
         },
         {
             "id": "A1-010",
-            "question": "ที่",
-            "answer": "at"
+            "question": "การเปลี่ยนแปลง",
+            "answer": "change (n.)"
         },
         {
             "id": "A1-011",
-            "question": "ได้",
-            "answer": "can"
+            "question": "เด็ก, ลูก",
+            "answer": "child (n.)"
         },
         {
             "id": "A1-012",
-            "question": "เห็น",
-            "answer": "look"
+            "question": "ป่ายปีน, ปีน",
+            "answer": "climb (v.)"
         },
         {
             "id": "A1-013",
-            "question": "มา",
-            "answer": "come"
+            "question": "รายละเอียด",
+            "answer": "detail (n.)"
         },
         {
             "id": "A1-014",
-            "question": "ฉัน",
-            "answer": "I"
+            "question": "สร้างสรรค์",
+            "answer": "create (v.)"
         },
         {
             "id": "A1-015",
-            "question": "เขา",
-            "answer": "he"
+            "question": "การขับรถ",
+            "answer": "drive (n.)"
         },
         {
             "id": "A1-016",
-            "question": "เธอ",
-            "answer": "she"
+            "question": "ง่ายดาย",
+            "answer": "easy (adj.)"
         },
         {
             "id": "A1-017",
-            "question": "เรา",
-            "answer": "we"
+            "question": "ลืมเลือน",
+            "answer": "forget (v.)"
         },
         {
             "id": "A1-018",
-            "question": "พวกเขา",
-            "answer": "they"
+            "question": "เทศกาล",
+            "answer": "festival (n.)"
         },
         {
             "id": "A1-019",
-            "question": "นักเรียน",
-            "answer": "student"
+            "question": "ภูมิศาสตร์",
+            "answer": "geography (n.)"
         },
         {
             "id": "A1-020",
-            "question": "ครู",
-            "answer": "teacher"
+            "question": "ดี, หมาะสม",
+            "answer": "good (adj.)"
         },
         {
             "id": "A1-021",
-            "question": "เด็ก",
-            "answer": "child"
+            "question": "สำคัญ",
+            "answer": "important (adj.)"
         },
         {
             "id": "A1-022",
-            "question": "มือ",
-            "answer": "hand"
+            "question": "ทำให้ดีขึ้น",
+            "answer": "improve (v.)"
         },
         {
             "id": "A1-023",
-            "question": "เท้า",
-            "answer": "foot"
+            "question": "ใน",
+            "answer": "in (prep., adv.)"
         },
         {
             "id": "A1-024",
-            "question": "หัว",
-            "answer": "head"
+            "question": "หมายความว่า",
+            "answer": "mean (v.)"
         },
         {
             "id": "A1-025",
-            "question": "ตา",
-            "answer": "eye"
+            "question": "ความหมาย",
+            "answer": "meaning (n.)"
         },
         {
             "id": "A1-026",
-            "question": "หู",
-            "answer": "ear"
+            "question": "แม่น้ำ",
+            "answer": "river (n.)"
         },
         {
             "id": "A1-027",
-            "question": "จมูก",
-            "answer": "nose"
+            "question": "ถนน",
+            "answer": "road (n.)"
         },
         {
             "id": "A1-028",
-            "question": "ปาก",
-            "answer": "mouth"
+            "question": "หยุด, การหยุด",
+            "answer": "stop (v., n.)"
         },
         {
             "id": "A1-029",
-            "question": "ใจ",
-            "answer": "heart"
+            "question": "สะสม, กักเก็บ",
+            "answer": "store (n.)"
         },
         {
             "id": "A1-030",
-            "question": "สวัสดี",
-            "answer": "hello"
+            "question": "เรื่องราว, นิยาย",
+            "answer": "story (n.)"
         }
     ]
 }
