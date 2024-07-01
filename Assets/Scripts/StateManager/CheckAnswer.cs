@@ -67,10 +67,10 @@ public class CheckAnswer : MonoBehaviour
             UIManager.currentCoin += 150 * UIManager.CoinBonus;
         }
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         targetImage.sprite = non;
 
-        yield return new WaitForSeconds(0.25f);
+        //yield return new WaitForSeconds(0.1f);
         questionsRespon.randomQuestion();
 
         Debug.Log(optionAnswer + " : " + correctAnswer);
