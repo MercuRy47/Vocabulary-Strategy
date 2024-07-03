@@ -17,6 +17,7 @@ public class HealthManager : MonoBehaviour
     public float maxHealthPlayer;
     public float damagePlayer;
     public float defendPlayer;
+    public TextMeshProUGUI infoBarPlayer;
 
     [Header("Enemy")]
     public Image healthBarEnemy;
@@ -26,6 +27,7 @@ public class HealthManager : MonoBehaviour
     public float maxHealthEnemy;
     public float damageEnemy;
     public float defendEnemy;
+    public TextMeshProUGUI infoBarEnemy;
 
     private void Awake()
     {
@@ -75,5 +77,8 @@ public class HealthManager : MonoBehaviour
 
         healthBarPlayer.fillAmount = Mathf.Lerp(0, 1, healthPlayer / maxHealthPlayer);
         healthBarEnemy.fillAmount = Mathf.Lerp(0, 1, healthEnemy / maxHealthEnemy);
+
+        infoBarEnemy.text = $"Attack: {damageEnemy} \nDefend: {defendEnemy}";
+        infoBarPlayer.text = $"Attack: {damagePlayer} \nDefend: {defendPlayer}";
     }
 }
