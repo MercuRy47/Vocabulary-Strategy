@@ -30,6 +30,12 @@ EditorBuildSettings:
     path: Assets/Scenes/State-4.unity
     guid: b5d3f5449874e174999c28f966d77487
   - enabled: 1
+    path: Assets/Scenes/State-5.unity
+    guid: ac4f02ac60fc4445c97ab786a681e227
+  - enabled: 1
+    path: Assets/Scenes/State-6.unity
+    guid: 56b22d2deb71142e59c2c63f6e6667a0
+  - enabled: 1
     path: Assets/Scenes/State-7.unity
     guid: 9ae97e85620dffa428a399ee274c34c7
   - enabled: 1
