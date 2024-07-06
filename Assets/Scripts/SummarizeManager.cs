@@ -139,6 +139,13 @@ public class SummarizeManager : MonoBehaviour
             if (LoadScenes.countState > 6) return;
             LoadScenes.countState++;
         }
+        else if (currentScene.name == "State-7")
+        {
+            if (StarRatingManager.starCounts[6] > currentStar) return;
+            StarRatingManager.AddToStarCount(6, currentStar);
+            if (LoadScenes.countState > 7) return;
+            LoadScenes.countState++;
+        }
         SaveGame.SaveCountState();
     }
 }

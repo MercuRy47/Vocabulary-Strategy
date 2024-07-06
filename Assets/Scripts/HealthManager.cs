@@ -78,7 +78,7 @@ public class HealthManager : MonoBehaviour
         healthBarPlayer.fillAmount = Mathf.Lerp(0, 1, healthPlayer / maxHealthPlayer);
         healthBarEnemy.fillAmount = Mathf.Lerp(0, 1, healthEnemy / maxHealthEnemy);
 
-        infoBarEnemy.text = $"Attack: {damageEnemy} \nDefend: {defendEnemy}";
-        infoBarPlayer.text = $"Attack: {damagePlayer} \nDefend: {defendPlayer}";
+        infoBarEnemy.text = $"Attack: {(int)damageEnemy} \nDefend: {(int)defendEnemy}";
+        infoBarPlayer.text = $"Attack: {(int)damagePlayer} \nDefend: {(int)defendPlayer}";
     }
 }

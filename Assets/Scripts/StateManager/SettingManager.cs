@@ -15,6 +15,11 @@ public class SettingManager : MonoBehaviour
         SceneManager.LoadScene("States");
     }
 
+    public void BackToHomePage()
+    {
+        SceneManager.LoadScene("HomePage");
+    }
+
     public void SoundOnOff()
     {
         if (isTrue)

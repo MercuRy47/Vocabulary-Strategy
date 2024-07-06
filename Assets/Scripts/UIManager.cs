@@ -49,6 +49,7 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         currentCoin = 0;
+        CoinBonus = 1;
         UpdateCoin();
         StartRightUI();
 
