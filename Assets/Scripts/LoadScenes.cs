@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class LoadScenes : MonoBehaviour
 {
     [Header("Count State")]
-    public static int countState;
+    public static int countState = 1;
     private int count;
 
     private void Start()

@@ -7,14 +7,13 @@ public class SaveGame : MonoBehaviour
 {
     private void Awake()
     {
-        // โหลดค่าตัวแปร countState จาก PlayerPrefs
         if (PlayerPrefs.HasKey("CountState"))
         {
             LoadScenes.countState = PlayerPrefs.GetInt("CountState");
         }
         else
         {
-            LoadScenes.countState = 0; // ตั้งค่าเริ่มต้นหากไม่มีค่าใน PlayerPrefs
+            LoadScenes.countState = 1;
         }
     }
 
@@ -23,11 +22,11 @@ public class SaveGame : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.U))
         {
             LoadScenes.countState++;
-            SaveCountState(); // บันทึกค่าตัวแปร countState ทุกครั้งที่มีการเปลี่ยนแปลง
+            SaveCountState();
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
-            LoadScenes.countState = 0;
+            LoadScenes.countState = 1;
             SaveCountState();
         }
     }
