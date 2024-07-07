@@ -30,7 +30,7 @@ public class CountStart : MonoBehaviour
 
     private void Start()
     {
-        // เริ่มต้นนับถอยหลังได้โดยการเรียก StartCountdown()
+        // ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ้นนับ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝัง๏ฟฝ๏ฟฝ๏ฟฝยก๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝยก StartCountdown()
         GameObj2.SetActive(false);
 
         audioSource = GetComponent<AudioSource>();
