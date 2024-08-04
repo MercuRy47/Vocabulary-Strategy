@@ -17,8 +17,13 @@ public class StarRatingManager : MonoBehaviour
 
     private void Update()
     {
-        // ÍÑ¾à´·¤èÒã¹·Ø¡à¿ÃÁ (¶éÒµéÍ§¡ÒÃ)
+        // ï¿½Ñ¾à´·ï¿½ï¿½ï¿½ã¹·Ø¡ï¿½ï¿½ï¿½ (ï¿½ï¿½Òµï¿½Í§ï¿½ï¿½ï¿½)
         UpdateStarRatings();
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            ResetStarCounts();
+        }
     }
 
     private void UpdateStarRatings(bool isLoading = false)
@@ -32,12 +37,12 @@ public class StarRatingManager : MonoBehaviour
                 {
                     if (isLoading)
                     {
-                        // àÁ×èÍâËÅ´¤èÒ ãËéà«çµ¤èÒ count µÒÁ·ÕèºÑ¹·Ö¡äÇé
+                        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½çµ¤ï¿½ï¿½ count ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¹ï¿½Ö¡ï¿½ï¿½ï¿½
                         starRating.count = starCounts[i];
                     }
                     else
                     {
-                        // ºÑ¹·Ö¡¤èÒ count Å§ã¹ starCounts
+                        // ï¿½Ñ¹ï¿½Ö¡ï¿½ï¿½ï¿½ count Å§ï¿½ starCounts
                         starCounts[i] = starRating.count;
                     }
                 }
@@ -84,7 +89,7 @@ public class StarRatingManager : MonoBehaviour
         }
     }
 
-    // à¾ÔèÁ¿Ñ§¡ìªÑ¹à¾×èÍà¾ÔèÁ¤èÒã¹ starCounts
+    // ï¿½ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½Ñ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ starCounts
     public static void AddToStarCount(int index, int value)
     {
         if (index >= 0 && index < starCounts.Length)
@@ -93,5 +98,17 @@ public class StarRatingManager : MonoBehaviour
             PlayerPrefs.SetInt($"StarCount_{index}", starCounts[index]);
             PlayerPrefs.Save();
         }
+    }
+
+    private void ResetStarCounts()
+    {
+        for (int i = 0; i < starCounts.Length; i++)
+        {
+            starCounts[i] = 0;
+            PlayerPrefs.SetInt($"StarCount_{i}", 0);
+        }
+        PlayerPrefs.Save();
+        UpdateStarRatings(true);
+        Debug.Log("Star counts have been reset.");
     }
 }

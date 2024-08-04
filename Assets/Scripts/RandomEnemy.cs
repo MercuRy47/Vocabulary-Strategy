@@ -12,6 +12,7 @@ public class RandomEnemy : MonoBehaviour
     private static string[] randomText = { "-Non-", "Enemy: Attack x1.5", "-Non-", "Enemy: Attack x1.2", "-Non-", "-Non-", "Enemy: Health +20", "-Non-", "-Non-", "-Non-" };
 
     public float initialDamageEnemy;
+    public float displayTime = 2f; // เวลาที่ใช้แสดงข้อความสุ่ม
 
     private void Awake()
     {
@@ -27,22 +28,47 @@ public class RandomEnemy : MonoBehaviour
         }
     }
 
-    private void Start()
+ private void Start()
     {
         // Store initial values of damageEnemy and defendEnemy
         initialDamageEnemy = HealthManager.Instance.damageEnemy;
+        // Uncomment this line if you want to start displaying random text automatically
+        // StartCoroutine(DisplayRandomTextRoutine()); 
     }
 
     public void DisplayRandomText()
     {
-        // Reset damageEnemy and defendEnemy to initial values
+        StartCoroutine(DisplayRandomTextRoutine());
+    }
+
+    private IEnumerator DisplayRandomTextRoutine()
+    {
+        float elapsedTime = 0f;
+        while (elapsedTime < displayTime)
+        {
+            int randomIndex = Random.Range(0, randomText.Length);
+            string selectedText = randomText[randomIndex];
+            tmpRandomEnemy.text = selectedText;
+
+            yield return new WaitForSeconds(0.1f); // แสดงข้อความแบบสุ่มทุกๆ 0.1 วินาที
+            elapsedTime += 0.1f;
+        }
+
+        // แสดงข้อความสุดท้ายที่สุ่มได้
+        int finalRandomIndex = Random.Range(0, randomText.Length);
+        string finalSelectedText = randomText[finalRandomIndex];
+        tmpRandomEnemy.text = finalSelectedText;
+
+        // ใช้ข้อความสุดท้ายที่สุ่มได้ในการคำนวณค่าอื่นๆ
+        Debug.Log($"Selected Text: {finalSelectedText}, Index: {finalRandomIndex}");
+
+        // ใช้ผลลัพธ์ที่ได้ในการปรับค่าอื่นๆ
+        ApplyRandomEffect(finalRandomIndex);
+    }
+
+    private void ApplyRandomEffect(int randomIndex)
+    {
         HealthManager.Instance.damageEnemy = initialDamageEnemy;
-
-        int randomIndex = Random.Range(0, randomText.Length);
-        string selectedText = randomText[randomIndex];
-        tmpRandomEnemy.text = selectedText;
-
-        Debug.Log($"Selected Text: {selectedText}, Index: {randomIndex}");
 
         if (randomIndex == 1)
         {

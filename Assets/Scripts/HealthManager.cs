@@ -55,6 +55,10 @@ public class HealthManager : MonoBehaviour
         {
             AttackPlayer(10f);
         }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            damagePlayer += 20;
+        }
 
         UpdateUI();
     }

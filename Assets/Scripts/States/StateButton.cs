@@ -5,9 +5,9 @@ using UnityEngine.EventSystems;
 [RequireComponent(typeof(Button), typeof(AudioSource))]
 public class StateButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public float hoverScale = 1.1f; // ขนาดที่ปุ่มจะขยายของเมื่อโดนเมาส์
-    public AudioClip hoverSound; // เสียงที่เล่นเมื่อโดนเมาส์
-    public AudioClip clickSound; // เสียงที่เล่นเมื่อคลิก
+    public float hoverScale = 1.1f; // ๏ฟฝ๏ฟฝาด๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝะข๏ฟฝ๏ฟฝยของ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝโดน๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ
+    public AudioClip hoverSound; // ๏ฟฝ๏ฟฝ๏ฟฝยง๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝโดน๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ
+    public AudioClip clickSound; // ๏ฟฝ๏ฟฝ๏ฟฝยง๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอค๏ฟฝิก
 
     private Button button;
     private AudioSource audioSource;
@@ -21,37 +21,36 @@ public class StateButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         audioSource.playOnAwake = false;
         audioSource.Stop();
 
-        // เก็บขนาดเดิมของปุ่ม
+        // ๏ฟฝ็บข๏ฟฝาด๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝอง๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ
         originalScale = transform.localScale;
 
-        // เพิ่ม Listener สำหรับปุ่ม
+        // ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ Listener ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝับ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ
         button.onClick.AddListener(OnClick);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        // เมื่อโดนเมาส์
+        // ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝโดน๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ
         if (button.interactable)
         {
-            transform.localScale = originalScale * hoverScale; // ขยายขนาด
-            audioSource.clip = hoverSound; // กำหนดเสียง
-            audioSource.Play(); // เล่นเสียง
+            transform.localScale = originalScale * hoverScale; // ๏ฟฝ๏ฟฝ๏ฟฝยข๏ฟฝาด
+            audioSource.clip = hoverSound; // ๏ฟฝ๏ฟฝหน๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝยง
+            audioSource.Play(); // ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝยง
         }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        // เมื่อไม่โดนเมาส์
-        transform.localScale = originalScale; // คืนขนาดเดิม
+        // ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝโดน๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ๏ฟฝ
+        transform.localScale = originalScale; // ๏ฟฝืน๏ฟฝ๏ฟฝาด๏ฟฝ๏ฟฝ๏ฟฝ
     }
 
     void OnClick()
     {
-        // เมื่อคลิก
         if (button.interactable)
         {
-            audioSource.clip = clickSound; // กำหนดเสียง
-            audioSource.Play(); // เล่นเสียง
+            audioSource.clip = clickSound;
+            audioSource.Play();
         }
     }
 }

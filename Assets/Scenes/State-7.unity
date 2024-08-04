@@ -439,6 +439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tmpRandomEnemy: {fileID: 1305338248}
   initialDamageEnemy: 0
+  displayTime: 2
 --- !u!82 &59231395
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1347,6 +1348,10 @@ MonoBehaviour:
   non: {fileID: 21300000, guid: eed2d903e6657c2499352f22c51ee9af, type: 3}
   correct: {fileID: 21300000, guid: c11928081945d26449ea33a968d89668, type: 3}
   wrong: {fileID: 21300000, guid: a7dad872ed9ae4441958fef8a130d724, type: 3}
+  correctAnswerSound: {fileID: 8300000, guid: bfb8bbeeb0670cf4dbf1249181dea200, type: 3}
+  wrongAnswerSound: {fileID: 8300000, guid: 5069b48e98d7fc84cb7944b7273a3250, type: 3}
+  hoverScale: 1.05
+  hoverSound: {fileID: 8300000, guid: 0e440129379045e40b96c7e699088a75, type: 3}
 --- !u!114 &106855277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1354,7 +1359,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 106855271}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 164375bafd2d95e40903b670327749af, type: 3}
   m_Name: 
@@ -1374,7 +1379,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -10170,6 +10175,10 @@ MonoBehaviour:
   non: {fileID: 21300000, guid: eed2d903e6657c2499352f22c51ee9af, type: 3}
   correct: {fileID: 21300000, guid: c11928081945d26449ea33a968d89668, type: 3}
   wrong: {fileID: 21300000, guid: a7dad872ed9ae4441958fef8a130d724, type: 3}
+  correctAnswerSound: {fileID: 8300000, guid: bfb8bbeeb0670cf4dbf1249181dea200, type: 3}
+  wrongAnswerSound: {fileID: 8300000, guid: 5069b48e98d7fc84cb7944b7273a3250, type: 3}
+  hoverScale: 1.05
+  hoverSound: {fileID: 8300000, guid: 0e440129379045e40b96c7e699088a75, type: 3}
 --- !u!114 &808289268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10177,7 +10186,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 808289262}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 164375bafd2d95e40903b670327749af, type: 3}
   m_Name: 
@@ -10197,7 +10206,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -18726,6 +18735,10 @@ MonoBehaviour:
   non: {fileID: 21300000, guid: eed2d903e6657c2499352f22c51ee9af, type: 3}
   correct: {fileID: 21300000, guid: c11928081945d26449ea33a968d89668, type: 3}
   wrong: {fileID: 21300000, guid: a7dad872ed9ae4441958fef8a130d724, type: 3}
+  correctAnswerSound: {fileID: 8300000, guid: bfb8bbeeb0670cf4dbf1249181dea200, type: 3}
+  wrongAnswerSound: {fileID: 8300000, guid: 5069b48e98d7fc84cb7944b7273a3250, type: 3}
+  hoverScale: 1.05
+  hoverSound: {fileID: 8300000, guid: 0e440129379045e40b96c7e699088a75, type: 3}
 --- !u!114 &1717844726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18733,7 +18746,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1717844720}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 164375bafd2d95e40903b670327749af, type: 3}
   m_Name: 
@@ -18753,7 +18766,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
